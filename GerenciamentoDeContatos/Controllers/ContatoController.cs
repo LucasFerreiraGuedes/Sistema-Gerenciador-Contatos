@@ -22,6 +22,16 @@ namespace GerenciamentoDeContatos.Controllers
 		{
 			return View();
 		}
+		public IActionResult Editar(int id)
+		{
+			Contato contato = _contatoRepository.GetContatoById(id);
+			return View(contato);
+		}
+		public IActionResult Apagar(int id)
+		{
+			_contatoRepository.ApagarContato(id);
+            return RedirectToAction("Index");
+        }
 
 		[HttpPost]
 		public IActionResult Criar(Contato contato)
@@ -30,5 +40,12 @@ namespace GerenciamentoDeContatos.Controllers
 
 			return RedirectToAction("Index");
 		}
-	}
+        [HttpPost]
+        public IActionResult Atualizar(Contato contato)
+        {
+            _contatoRepository.AtualizarContato(contato);
+
+            return RedirectToAction("Index");
+        }
+    }
 }

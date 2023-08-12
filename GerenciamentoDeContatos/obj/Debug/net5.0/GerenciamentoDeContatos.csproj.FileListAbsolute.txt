@@ -784,3 +784,4 @@ C:\Users\Lucas Ferreira Gudes\OneDrive\Projetos\ASP NET MVC - Contatos\Sistema-G
 C:\Users\Lucas Ferreira Gudes\OneDrive\Projetos\ASP NET MVC - Contatos\Sistema-Gerenciador-Contatos\GerenciamentoDeContatos\obj\Debug\net5.0\GerenciamentoDeContatos.pdb
 C:\Users\Lucas Ferreira Gudes\OneDrive\Projetos\ASP NET MVC - Contatos\Sistema-Gerenciador-Contatos\GerenciamentoDeContatos\obj\Debug\net5.0\GerenciamentoDeContatos.genruntimeconfig.cache
 C:\Users\Lucas Ferreira Gudes\OneDrive\Projetos\ASP NET MVC - Contatos\Sistema-Gerenciador-Contatos\GerenciamentoDeContatos\obj\Debug\net5.0\ref\GerenciamentoDeContatos.dll
+C:\Users\Lucas Ferreira Gudes\OneDrive\Projetos\ASP NET MVC - Contatos\Sistema-Gerenciador-Contatos\GerenciamentoDeContatos\obj\Debug\net5.0\Razor\Views\Contato\Editar.cshtml.g.cs
