@@ -29,23 +29,51 @@ namespace GerenciamentoDeContatos.Controllers
 		}
 		public IActionResult Apagar(int id)
 		{
-			_contatoRepository.ApagarContato(id);
-            return RedirectToAction("Index");
+			try
+			{
+                _contatoRepository.ApagarContato(id);
+                TempData["MensagemSucesso"] = "O contato foi apagado com sucesso!";
+                return RedirectToAction("Index");
+            }
+			catch (System.Exception erro)
+			{
+                TempData["MensagemErro"] = $"Ocorreu um erro ao tentar apagar o contato, favor tentar novamente. Detalhes do erro: {erro.Message}";
+                return RedirectToAction("Index");
+            }
+			
         }
 
 		[HttpPost]
 		public IActionResult Criar(Contato contato)
 		{
-			_contatoRepository.Add(contato);
-
-			return RedirectToAction("Index");
+			try
+			{
+                _contatoRepository.Add(contato);
+				TempData["MensagemSucesso"] = "O contato foi salvo com sucesso!";
+                return RedirectToAction("Index");
+            }
+			catch (System.Exception erro)
+			{
+                TempData["MensagemErro"] = $"Ocorreu um erro ao tentar salvar o contato, favor tentar novamente. Detalhes do erro: {erro.Message}";
+                return RedirectToAction("Index");
+            }
+			
 		}
         [HttpPost]
         public IActionResult Atualizar(Contato contato)
         {
-            _contatoRepository.AtualizarContato(contato);
-
-            return RedirectToAction("Index");
+			try
+			{
+                _contatoRepository.AtualizarContato(contato);
+                TempData["MensagemSucesso"] = "O contato foi atualizado com sucesso!";
+                return RedirectToAction("Index");
+            }
+			catch (System.Exception erro)
+			{
+                TempData["MensagemErro"] = $"Ocorreu um erro ao tentar atualizar o contato, favor tentar novamente. Detalhes do erro: {erro.Message}";
+                return RedirectToAction("Index");
+            }
+           
         }
     }
 }

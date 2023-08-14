@@ -11,6 +11,7 @@
 <a type="button" class="btn btn-success" asp-controller="Contato" asp-action="CriarContato" >Salvar novo Contato</a>
 <br />
 <br />
+
 <table class="table">
     <thead>
         <tr>
@@ -46,3 +47,22 @@
        
     </tbody>
 </table>
+
+<br />
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class=" text-center alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="text-center alert alert-danger" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+

@@ -1,5 +1,7 @@
 ﻿using GerenciamentoDeContatos.Data;
 using GerenciamentoDeContatos.Models;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Linq;
 
@@ -17,6 +19,7 @@ namespace GerenciamentoDeContatos.Repository.ContatoRepo
         {
            if (entity is Contato)
             {
+              
                 _context.Add(entity);
                 _context.SaveChanges();
             }
